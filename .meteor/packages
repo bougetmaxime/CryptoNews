@@ -19,3 +19,15 @@ shell-server@0.3.0            # Server-side component of the `meteor shell` comm
 
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
+
+
+
+http
+twbs:bootstrap
+momentjs:moment
+percolate:synced-cron
+
+### Tweeter package
+meteorhacks:npm     #### watch on package.json 
+
+npm-container
