@@ -1,5 +1,8 @@
 if (Meteor.isServer) {
 
+var today = moment.parseZone(new Date()).utc().add(2, 'hours').format(); //récupération de la date à l'endroit du serveur
+var todaymin5 = moment(today).subtract(5, 'days').utc().format();
+console.log('ici c est ' + todaymin5);
 
 Meteor.startup(function () {
     // code to run on server at startup
@@ -14,11 +17,12 @@ Meteor.startup(function () {
     });
 
     //  search twitter for all tweets containing the word 'banana'
-    //  since Nov. 11, 2011
+    //  since last One minute
+
     T.get('search/tweets',
         {
-            q: 'crypto since:2017-11-11',
-            count: 100
+            q: 'from:bitcoin since:'+ todaymin5,
+            count: 10
         },
         function(err, data, response) {
             console.log(data);

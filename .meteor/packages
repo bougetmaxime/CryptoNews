@@ -27,7 +27,8 @@ twbs:bootstrap
 momentjs:moment
 percolate:synced-cron
 
-### Tweeter package
-meteorhacks:npm     #### watch on package.json 
+########### Tweeter package##########   
+meteorhacks:npm     
+       #### watch on package.json 
 
 npm-container
